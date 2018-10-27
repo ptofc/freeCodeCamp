@@ -49,6 +49,36 @@ You get the equivallent of:
 printf("Hello World!");
 ```
 
+#### Declaring Template Function Macros
+Defining a teamplate function:
+```C
+#define GENERATE_FUNC(FUNC_NAME) \
+int FUNC_NAME (const int& param) \
+{\
+	printf("(%s)Input param: %d\n", __FUNCTION__, param); \
+	return param; \
+}
+```
+Generating function by calling:
+```C
+GENERATE_FUNC(FuncA)
+GENERATE_FUNC(FuncB)
+```
+Calling this function in main example:
+```C
+int main()
+{
+	FuncA(1);
+	FuncB(2);
+	return 0;
+}
+```
+Output:
+```C
+>(FuncA)Input param : 1
+>(FuncB)Input param : 2
+```
+
 #### More Information:
 <!-- Please add any articles you think might be helpful to read before writing the article -->
 [GCC Online Documentation: Macros](https://gcc.gnu.org/onlinedocs/cpp/Macros.html)
