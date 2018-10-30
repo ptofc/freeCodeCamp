@@ -126,3 +126,7 @@ Here you can learn more about map: <a href="http://www.cplusplus.com/reference/m
 N.B: All code in example are in C++11 version. You can learn more about C++ version <a href="http://en.cppreference.com/w/cpp/compiler_support" target="_blank">Here</a>
 
 
+
+## Fast accessing map elements
+When you want to fast access individual elements by their key, you should use std::unordered_map instead of map.
+Here you can learn more about map: <a href="https://en.cppreference.com/w/cpp/container/unordered_map" target="_blank">cpluspluc_unorder_map</a>
